@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+C:\Users\raman\OneDrive\Documents\spring-boot-jan-21\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2371459130.index
+\jdbc-maven-webapp\src\main\resources

@@ -1,0 +1,14 @@
+package com.example.mvn.dao;
+
+import com.example.mvn.model.Employee;
+
+public interface IEmployeeDao {
+
+	public Employee getEmployee(int empId);
+	
+	public Employee addEmployee(Employee emp);
+	
+	public boolean deleteEmployee(int empId);
+	
+	
+}

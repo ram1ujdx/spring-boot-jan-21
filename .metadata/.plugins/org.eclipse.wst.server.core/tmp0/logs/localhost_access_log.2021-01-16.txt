@@ -1,0 +1,15 @@
+127.0.0.1 - - [16/Jan/2021:21:11:14 +0530] "GET / HTTP/1.1" 404 1073
+0:0:0:0:0:0:0:1 - - [16/Jan/2021:21:11:18 +0530] "GET /jdbc-maven-webapp/add-employee.jsp HTTP/1.1" 200 432
+0:0:0:0:0:0:0:1 - - [16/Jan/2021:21:11:18 +0530] "GET /favicon.ico HTTP/1.1" 404 1084
+0:0:0:0:0:0:0:1 - - [16/Jan/2021:21:11:43 +0530] "POST /jdbc-maven-webapp/addemployee HTTP/1.1" 500 1478
+127.0.0.1 - - [16/Jan/2021:21:13:54 +0530] "GET / HTTP/1.1" 404 1073
+0:0:0:0:0:0:0:1 - - [16/Jan/2021:21:14:02 +0530] "POST /jdbc-maven-webapp/addemployee HTTP/1.1" 500 1478
+127.0.0.1 - - [16/Jan/2021:21:15:18 +0530] "GET / HTTP/1.1" 404 1073
+0:0:0:0:0:0:0:1 - - [16/Jan/2021:21:15:24 +0530] "POST /jdbc-maven-webapp/addemployee HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [16/Jan/2021:21:15:25 +0530] "GET /jdbc-maven-webapp/success.jsp HTTP/1.1" 200 186
+0:0:0:0:0:0:0:1 - - [16/Jan/2021:21:15:44 +0530] "POST /jdbc-maven-webapp/addemployee HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [16/Jan/2021:21:15:44 +0530] "GET /jdbc-maven-webapp/success.jsp HTTP/1.1" 200 186
+0:0:0:0:0:0:0:1 - - [16/Jan/2021:21:16:04 +0530] "POST /jdbc-maven-webapp/addemployee HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [16/Jan/2021:21:16:04 +0530] "GET /jdbc-maven-webapp/success.jsp HTTP/1.1" 200 186
+0:0:0:0:0:0:0:1 - - [16/Jan/2021:21:16:12 +0530] "POST /jdbc-maven-webapp/addemployee HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [16/Jan/2021:21:16:13 +0530] "GET /jdbc-maven-webapp/error.jsp HTTP/1.1" 200 182

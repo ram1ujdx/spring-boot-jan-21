@@ -1,0 +1,5 @@
+package com.example.mvn.model;
+
+public class Employee {
+
+}
