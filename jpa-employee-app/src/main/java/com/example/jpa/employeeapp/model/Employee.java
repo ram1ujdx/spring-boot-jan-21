@@ -1,18 +1,54 @@
 package com.example.jpa.employeeapp.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
+//@Table(name = "employee_info")
 public class Employee {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int empId;
+	@Column(name = "emp_Name")
 	private String empName;
+	@Column(nullable = false, unique = true)
 	private String email;
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+	private Department dept;
+	
+	
+	
+	
+	@Transient
+	private int tempId;
+	
+	
+	
+	public Department getDept() {
+		return dept;
+	}
+	public void setDept(Department dept) {
+		this.dept = dept;
+	}
+	public int getTempId() {
+		return tempId;
+	}
+	public void setTempId(int tempId) {
+		this.tempId = tempId;
+	}
 	public Employee() {
 	}
-	public Employee(int empId, String empName, String email) {
+	public Employee(String empName, String email) {
 		super();
 		this.empId = empId;
 		this.empName = empName;
@@ -38,8 +74,10 @@ public class Employee {
 	}
 	@Override
 	public String toString() {
-		return "Employee [empId=" + empId + ", empName=" + empName + ", email=" + email + "]";
+		return "Employee [empId=" + empId + ", empName=" + empName + ", email=" + email + ", dept=" + dept + ", tempId="
+				+ tempId + "]";
 	}
+	
 	
 	
 	
