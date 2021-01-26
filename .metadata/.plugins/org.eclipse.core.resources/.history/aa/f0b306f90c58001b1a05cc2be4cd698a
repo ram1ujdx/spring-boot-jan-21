@@ -1,5 +1,0 @@
-package com.example.mvn.service;
-
-public interface IEmployeeService {
-
-}

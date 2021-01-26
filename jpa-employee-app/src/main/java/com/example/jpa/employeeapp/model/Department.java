@@ -15,7 +15,7 @@ public class Department {
 	private int deptId;
 	private String deptName;
 	private String location;
-	@OneToMany(fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "dept")
 	private List<Employee> employees=new ArrayList<>();
 	
 	public Department() {
