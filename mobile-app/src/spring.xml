@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+
+<!--
+ 
+<bean id="airtel" class="com.example.AirtelSim">
+</bean>
+-->
+
+<bean id="jio" class="com.example.JioSim"/>
+
+<bean id="samsung" class="com.example.Mobile" autowire="byType">
+<!-- <property name="sim" ref="jio"/> -->
+<property name="brandName" value="Samsung"/>
+<property name="ram" value="8"/>
+<property name="storage" value="128"/>
+<property name="supportedNetworks">
+<list>
+<value>HSPA</value>
+<value>4G LTE</value>
+<value>5G</value>
+</list>
+</property>
+</bean>
+
+<bean id="apple" class="com.example.Mobile" autowire="byType">
+<property name="brandName" value="Apple"/>
+<property name="ram" value="4"/>
+<property name="storage" value="64"/>
+<property name="supportedNetworks">
+<list>
+<value>GPRS</value>
+<value>HSPA</value>
+<value>4G LTE</value>
+</list>
+</property>
+</bean>
+
+</beans>
