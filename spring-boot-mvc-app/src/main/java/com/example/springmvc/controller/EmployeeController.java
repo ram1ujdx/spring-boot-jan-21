@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.example.springmvc.model.Employee;
@@ -38,8 +39,9 @@ public class EmployeeController {
 	
 //	@RequestMapping(value = "/show-employee", method = RequestMethod.POST)
 	@PostMapping("/show-employee")
-	public String showEmployeeData(@ModelAttribute("emp") Employee emp) {
-		return "show";
+	@ResponseBody
+	public Employee showEmployeeData(@ModelAttribute("emp") Employee emp) {
+		return emp;
 	}
 	
 	
