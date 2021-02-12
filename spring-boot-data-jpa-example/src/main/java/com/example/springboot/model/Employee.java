@@ -1,5 +1,6 @@
 package com.example.springboot.model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 import javax.persistence.Column;
@@ -9,9 +10,20 @@ import javax.persistence.Table;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import javassist.SerialVersionUID;
+
 @Entity
 @Table(name = "employee_info")
-public class Employee {
+public class Employee implements Serializable {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2978208813279812398L;
+
+
+	
+	
 	
 	@Id
 	int employeeId;

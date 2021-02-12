@@ -46,5 +46,12 @@ public class EmployeeRepoImpl implements EmployeeRepo {
 	public Employee updateEmployee(Employee employee) {
 		return em.merge(employee);
 	}
+	
+	@Override
+	public Employee getEmployeeByEmail(String email) {
+		TypedQuery<Employee> query=em.createQuery("from Employee where email=:email",Employee.class);
+		query.setParameter("email", email);
+		return query.getSingleResult();
+	}
 
 }
